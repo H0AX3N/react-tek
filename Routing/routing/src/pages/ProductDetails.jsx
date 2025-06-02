@@ -3,7 +3,7 @@ import { useParams } from 'react-router';
 
 function ProductDetails() {
     const [product, setProduct] = useState([])
-    const {id} = useParams(); //it will return an object with the id property
+    const { id } = useParams(); //it will return an object with the id property
     const fetchDetails = async () => {
         try {
             const response = await fetch(`https://fakestoreapi.com/products/${id}`); // use the id that i grabbed from the URL using useParams
@@ -21,7 +21,7 @@ function ProductDetails() {
 
     return (
         <div>
-            <h1 className='bg-gray-100 p-4 m-2 rounded-xl shadow-lg'>{product.title}</h1>
+            <h1 className='bg-gray-100 p-4 m-2 rounded-xl shadow-lg'>{product.description}</h1>
         </div>
     )
 }
