@@ -4,9 +4,9 @@ function WithRef() {
     const [count, setCount] = useState(0)
     let a = useRef(0)
     useEffect(() => {
-        a.current = a.current + 1;
-        console.log(`The value of a is ${a.current}`)
-    })
+        // a.current = a.current + 1;
+        console.log(`The value of a is ${a.current++}`)
+    }, [])
     
     return (
         <div className='flex flex-col justify-center items-center gap-7'>

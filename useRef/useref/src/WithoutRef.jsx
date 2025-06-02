@@ -2,7 +2,7 @@
 
     function WithoutRef() {
         const [count, setCount] = useState(0)
-        let a = 0
+        let a = 0;
         useEffect(() => {
             a = a + 1;
             console.log(`The value of a is ${a}`)
