@@ -4,7 +4,7 @@ import * as Yup from "yup";
 
 // Validation Schema
 
-const phoneRegExp = /^[6-9]\d{9}$/; 
+const phoneRegExp = /^[6-9]\d{9}$/;
 
 // const validationSchema = Yup.object({});
 
@@ -182,6 +182,8 @@ const ManualFormikForm = () => {
                         <div style={{ color: "red" }}>{formik.errors.acceptTerms}</div>
                     )}
                 </div>
+
+                
 
                 <button type="submit" style={{ marginTop: 15 }}>
                     Submit

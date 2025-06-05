@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import ManualFormikForm from './ManualFormikForm'
 import FormSubmissionOne from './FormSubmissionOne'
+import DebouncedSearch from './DebouncedSearch'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -9,7 +10,8 @@ function App() {
   return (
     <>
       {/* <ManualFormikForm /> */}
-      <FormSubmissionOne />
+      {/* <FormSubmissionOne /> */}
+      <DebouncedSearch />
     </>
   )
 }
