@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router';
 
 function Recipes() {
     const [recipes, setRecipes] = useState([])
+    const navigate = useNavigate()
 
     const fetchRecipes = async () => {
         try {
             const response = await fetch('https://dummyjson.com/recipes');
             const data = await response.json();
             setRecipes(data.recipes);
-        } catch (error) {
+        } 
+        catch (error) {
             console.error('Error fetching recipes:', error);
         }
     }
@@ -22,7 +25,7 @@ function Recipes() {
             {
                 recipes.map((recipe) => {
                     return (
-                        <div key={recipe.id} className="card bg-base-100 w-100 shadow-lg">
+                        <div key={recipe.id} className="card bg-[#b67d5821] w-100 shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out">
                             <figure>
                                 <img
                                     src={recipe.image}
@@ -41,7 +44,7 @@ function Recipes() {
                                     }
                                 </div>
                                 <div className="card-actions justify-end">
-                                    <button className="btn btn-primary ">Check Recipe</button>
+                                    <button onClick={() => navigate(`/recipes/${recipe.id}`)} className="btn btn-primary ">Check Recipe</button>
                                 </div>
                             </div>
                         </div>

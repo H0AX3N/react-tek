@@ -10,8 +10,8 @@ function App() {
   return (
     <>
       {/* <ManualFormikForm /> */}
-      {/* <FormSubmissionOne /> */}
-      <DebouncedSearch />
+      <FormSubmissionOne />
+      {/* <DebouncedSearch /> */}
     </>
   )
 }
