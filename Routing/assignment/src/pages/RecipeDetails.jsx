@@ -26,7 +26,7 @@ function ProductDetails() {
 
     return (
         <div className="max-w-3xl mx-auto p-6 bg-white shadow-md rounded-xl mt-6">
-            <h1 className="text-2xl font-bold mb-4">{recipe.name}</h1>
+            <h1 className="text-2xl font-bold text-[brown] mb-4">{recipe.name}</h1>
 
             <h2 className="text-xl font-semibold mb-2">Instructions:</h2>
             <ol className="list-decimal list-inside space-y-2 mb-4">
@@ -41,7 +41,7 @@ function ProductDetails() {
                 <p><strong>Servings:</strong> {recipe.servings}</p>
                 <p><strong>Difficulty:</strong> {recipe.difficulty}</p>
                 <p><strong>Cuisine:</strong> {recipe.cuisine}</p>
-                <p><strong>Calories/Serving:</strong> {recipe.caloriesPerServing}</p>
+                <p><strong>Calories/Serving:</strong> {recipe.caloriesPerServing} kcal</p>
             </div>
         </div>
     );
