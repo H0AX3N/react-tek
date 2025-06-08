@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router';
 import useDebounce from '../hooks/useDebounce';
+import Blobs from '../components/Blobs';
 
 function Recipes() {
     const [recipes, setRecipes] = useState([]);
@@ -27,7 +28,9 @@ function Recipes() {
     );
 
     return (
-        <div className='p-4'>
+        
+        <div className='flex flex-col pt-29 bg-[#FAF7F5] min-h-screen'>
+            <Blobs />
             {/* Search Input */}
             <div className="flex justify-center mb-6">
                 <input
@@ -35,7 +38,7 @@ function Recipes() {
                     value={searchTerm}
                     onChange={e => setSearchTerm(e.target.value)}
                     placeholder="Search recipes..."
-                    className="px-4 py-2 w-[300px] rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400 self-end"
+                    className="px-4 py-2 w-[300px] rounded-full border-2 border-gray-300 focus:outline-none"
                 />
             </div>
 
@@ -43,11 +46,11 @@ function Recipes() {
             <div className='flex flex-wrap justify-center gap-5'>
                 {
                     filteredRecipes.map((recipe) => (
-                        <div key={recipe.id} className="card bg-[#b67d5821] w-100 shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out">
+                        <div key={recipe.id} className="card bg-[#A16945] w-100 shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out">
                             <figure>
                                 <img src={recipe.image} alt="Recipe" />
                             </figure>
-                            <div className="card-body flex flex-col justify-between">
+                            <div className="card-body flex flex-col justify-between text-white">
                                 <h2 className="card-title">{recipe.name}</h2>
 
                                 <div className='flex gap-2 flex-wrap justify-end mb-4'>
@@ -59,7 +62,7 @@ function Recipes() {
                                 <div className="card-actions justify-end mt-auto">
                                     <button
                                         onClick={() => navigate(`/recipes/${recipe.id}`)}
-                                        className="btn btn-primary"
+                                        className="btn btn-primary text-white"
                                     >
                                         Check Recipe
                                     </button>
