@@ -26,13 +26,19 @@ function ProductDetails() {
     }
 
     return (
-        <div className="bg-[#FAF7F5] min-h-screen flex items-center justify-center">
+        <div className="bg-[#FAF7F5] min-h-screen flex items-center justify-center py-23">
             <Blobs />
 
             <div className="max-w-3xl mx-auto p-6 bg-white shadow-md rounded-xl mt-6">
                 <h1 className="text-2xl font-bold text-[brown] mb-4">{recipe.name}</h1>
 
-                <h2 className="text-xl font-semibold mb-2">Instructions:</h2>
+                <h2 className="text-xl font-semibold mb-2 text-[#cb6969]">Ingredients:</h2>
+                <ol className="list-decimal list-inside space-y-2 mb-4">
+                    {recipe.ingredients.map((inst, idx) => (
+                        <li key={idx}>{inst}</li>
+                    ))}
+                </ol>
+                <h2 className="text-xl font-semibold mb-2 text-[#cb6969]">Instructions:</h2>
                 <ol className="list-decimal list-inside space-y-2 mb-4">
                     {recipe.instructions.map((inst, idx) => (
                         <li key={idx}>{inst}</li>

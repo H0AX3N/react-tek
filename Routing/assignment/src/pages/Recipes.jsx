@@ -29,7 +29,7 @@ function Recipes() {
 
     return (
         
-        <div className='flex flex-col pt-29 bg-[#FAF7F5] min-h-screen'>
+        <div className='flex flex-col py-29 bg-[#FAF7F5] min-h-screen'>
             <Blobs />
             {/* Search Input */}
             <div className="flex justify-center mb-6">
