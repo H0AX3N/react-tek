@@ -38,6 +38,7 @@ function Navbar() {
                     <Link to="/about">About</Link>
                     <Link to="/contact">Contact</Link>
                     <Link to="/recipes">Recipes</Link>
+                    <Link to="/dashboard">Logout</Link>
                 </ul>
 
                 {/* Hamburger Button with Animation */}
@@ -74,6 +75,7 @@ function Navbar() {
                     <Link to="/about" onClick={toggleMenu}>About</Link>
                     <Link to="/contact" onClick={toggleMenu}>Contact</Link>
                     <Link to="/recipes" onClick={toggleMenu}>Recipes</Link>
+                    <Link to="/dashboard" onClick={toggleMenu}>Logout</Link>
                 </ul>
             </div>
         </div>

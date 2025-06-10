@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom'; // updated to react-router-dom
+import { useNavigate, useParams } from 'react-router-dom'; // updated to react-router-dom
 import Blobs from '../components/Blobs';
 
 function ProductDetails() {
     const [recipe, setRecipe] = useState(null);
     const { id } = useParams();
+    const navigate = useNavigate();
 
     const fetchDetails = async () => {
         try {
@@ -30,6 +31,12 @@ function ProductDetails() {
             <Blobs />
 
             <div className="max-w-3xl mx-auto p-6 bg-white shadow-md rounded-xl mt-6">
+                <button
+                    onClick={() => navigate(-1)}
+                    className="mb-4 px-4 py-2 bg-gray-200 hover:bg-gray-300 text-gray-800 rounded shadow"
+                >
+                    ← Back
+                </button>
                 <h1 className="text-2xl font-bold text-[brown] mb-4">{recipe.name}</h1>
 
                 <h2 className="text-xl font-semibold mb-2 text-[#cb6969]">Ingredients:</h2>
