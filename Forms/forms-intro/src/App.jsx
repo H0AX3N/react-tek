@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import ManualFormikForm from './ManualFormikForm'
+// import ManualFormikForm from './ManualFormikForm'
 import FormSubmissionOne from './FormSubmissionOne'
-import DebouncedSearch from './DebouncedSearch'
+// import DebouncedSearch from './DebouncedSearch'
 
 function App() {
   const [count, setCount] = useState(0)

@@ -57,9 +57,9 @@ function FormSubmissionOne() {
     });
 
     return (
-        <div class="bg-[url('https://cdn.pixabay.com/photo/2023/08/29/18/01/rainbow-8221835_1280.jpg')] bg-cover bg-center h-screen w-screen ">
+        <div className="bg-[url('https://cdn.pixabay.com/photo/2023/08/29/18/01/rainbow-8221835_1280.jpg')] bg-cover bg-center h-screen w-screen ">
             <div className='flex flex-col items-center justify-center h-screen bg-white/1 backdrop-blur-2xl'>
-                <form className='flex flex-col gap-4 p-4 rounded-2xl shadow-md bg-white/15 backdrop-blur-sm'>
+                <form className='flex flex-col gap-4 p-4 rounded-2xl shadow-md bg-white/15 backdrop-blur-sm' onSubmit={formik.handleSubmit}>
                     <div>
                         <input
                             type="text"
@@ -113,6 +113,7 @@ function FormSubmissionOne() {
                             onChange={formik.handleChange}
                             onBlur={formik.handleBlur}
                         >
+                            <option value="">Select Country</option>
                             {countryNames.map((name, index) => (
                                 <option key={index} value={name}>
                                     {name}
@@ -205,16 +206,15 @@ function FormSubmissionOne() {
                     </div>
 
                     <div className='flex items-center justify-center gap-4'>
-                        <button className={buttonStyle}>
-                            <input type="submit" />
+                        <button className={buttonStyle} type="submit">
+                            Submit
                         </button>
                         {/* <button className={buttonStyle}>
                             <input type="submit" />
                         </button> */}
                     </div>
-
-
                 </form>
+                
             </div>
         </div>
 

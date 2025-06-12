@@ -5,6 +5,7 @@ import { decrement, increment, reset } from '../redux/counterSlice';
 function Counter() {
     const count = useSelector((state) => state.counter.value);
     const dispatch = useDispatch()
+    console.log(count)
 
     return (
         <div className='flex flex-col justify-center items-center min-h-screen bg-gray-100'>
