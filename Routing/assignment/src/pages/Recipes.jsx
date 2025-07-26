@@ -46,7 +46,7 @@ function Recipes() {
             <div className='flex flex-wrap justify-center gap-5'>
                 {
                     filteredRecipes.map((recipe) => (
-                        <div key={recipe.id} className="card bg-[#A16945] w-100 shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out">
+                        <div key={recipe.id} className="card bg-[#A16945] w-100 shadow-lg hover:scale-105">
                             <figure>
                                 <img src={recipe.image} alt="Recipe" />
                             </figure>

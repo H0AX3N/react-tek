@@ -19,7 +19,7 @@ function App() {
       <h1>Todo App</h1>
       <div className="flex flex-col gap-4">
         <input
-          className="border rounded w-80 p-2"
+          className="border rounded w-80 p-2 border-neutral-400"
           type="text"
           placeholder = "Add a todo"
           value={input}
@@ -29,7 +29,7 @@ function App() {
         <ul>
           {todos.map(todo => {
             return <li key={todo.id} className="flex justify-between items-center">
-              {todo.text}
+              <div className="bg-neutral-200 flex-1 py-2 pl-2 border-1 border-neutral-500/20 rounded-sm">{todo.text}</div>
               <button onClick={() => dispatch(removeTodo({ id: todo.id }))} className="bg-red-500 mx-4 my-1.5 px-2 py-2 rounded text-white">Remove</button>
             </li>
           })}
