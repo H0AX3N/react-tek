@@ -4,6 +4,7 @@ import CompOne from './components/CompOne'
 import CompTwo from './components/CompTwo'
 import CompThree from './components/CompThree'
 import CompFour from './components/CompFour'
+import RefPrac from './components/RefPrac'
 
 export const FirstNameContext = createContext()
 export const LastNameContext = createContext()
@@ -17,7 +18,7 @@ function App() {
 
   return (
     <>
-      <FirstNameContext.Provider value={name}>
+      {/* <FirstNameContext.Provider value={name}>
         <CompOne />
       </FirstNameContext.Provider>
       <LastNameContext.Provider value={name2}>
@@ -28,7 +29,8 @@ function App() {
       </TheContext.Provider>
       <GoatContext.Provider value={name4}>
         <CompFour />
-      </GoatContext.Provider>
+      </GoatContext.Provider> */}
+      <RefPrac />
     </>
   )
 }
